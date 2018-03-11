@@ -13,6 +13,11 @@
 		1BF174B32055569E003CECA1 /* HearIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BF174B12055569E003CECA1 /* HearIt.xcdatamodeld */; };
 		1BF174B52055569E003CECA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BF174B42055569E003CECA1 /* Assets.xcassets */; };
 		1BF174B82055569E003CECA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF174B62055569E003CECA1 /* LaunchScreen.storyboard */; };
+		1BF174C3205557E8003CECA1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF174C2205557E8003CECA1 /* TabBarViewController.swift */; };
+		1BF174C520555A51003CECA1 /* Podcasts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF174C420555A51003CECA1 /* Podcasts.swift */; };
+		1BF174C720555AC1003CECA1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF174C620555AC1003CECA1 /* SearchViewController.swift */; };
+		1BF174CA205562FF003CECA1 /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF174C9205562FF003CECA1 /* APIServices.swift */; };
+		95987C5D155E843F985E41D4 /* Pods_HearIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CB593F3A9E15E7E8DD711B /* Pods_HearIt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,13 @@
 		1BF174B42055569E003CECA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BF174B72055569E003CECA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BF174B92055569E003CECA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BF174C2205557E8003CECA1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		1BF174C420555A51003CECA1 /* Podcasts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcasts.swift; sourceTree = "<group>"; };
+		1BF174C620555AC1003CECA1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1BF174C9205562FF003CECA1 /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
+		87E4162C8130FD57CACA5D9F /* Pods-HearIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HearIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HearIt/Pods-HearIt.debug.xcconfig"; sourceTree = "<group>"; };
+		A8CB593F3A9E15E7E8DD711B /* Pods_HearIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HearIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC5E55F62E1F98D742333A26 /* Pods-HearIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HearIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-HearIt/Pods-HearIt.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95987C5D155E843F985E41D4 /* Pods_HearIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +55,8 @@
 			children = (
 				1BF174A92055569E003CECA1 /* HearIt */,
 				1BF174A82055569E003CECA1 /* Products */,
+				7FE98D0E0E81BC7B5BBCB8EF /* Pods */,
+				EA4F8B8C617D410AECDEA78C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +71,68 @@
 		1BF174A92055569E003CECA1 /* HearIt */ = {
 			isa = PBXGroup;
 			children = (
-				1BF174AA2055569E003CECA1 /* AppDelegate.swift */,
-				1BF174AC2055569E003CECA1 /* ViewController.swift */,
-				1BF174AE2055569E003CECA1 /* Main.storyboard */,
+				1BF174C120555796003CECA1 /* View */,
+				1BF174C020555790003CECA1 /* Model */,
+				1BF174BF2055577B003CECA1 /* Controller */,
+				1BF174C8205562DE003CECA1 /* API */,
 				1BF174B42055569E003CECA1 /* Assets.xcassets */,
-				1BF174B62055569E003CECA1 /* LaunchScreen.storyboard */,
+				1BF174AA2055569E003CECA1 /* AppDelegate.swift */,
 				1BF174B92055569E003CECA1 /* Info.plist */,
 				1BF174B12055569E003CECA1 /* HearIt.xcdatamodeld */,
 			);
 			path = HearIt;
+			sourceTree = "<group>";
+		};
+		1BF174BF2055577B003CECA1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1BF174AC2055569E003CECA1 /* ViewController.swift */,
+				1BF174C2205557E8003CECA1 /* TabBarViewController.swift */,
+				1BF174C620555AC1003CECA1 /* SearchViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1BF174C020555790003CECA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1BF174C420555A51003CECA1 /* Podcasts.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1BF174C120555796003CECA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1BF174AE2055569E003CECA1 /* Main.storyboard */,
+				1BF174B62055569E003CECA1 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1BF174C8205562DE003CECA1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1BF174C9205562FF003CECA1 /* APIServices.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		7FE98D0E0E81BC7B5BBCB8EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87E4162C8130FD57CACA5D9F /* Pods-HearIt.debug.xcconfig */,
+				FC5E55F62E1F98D742333A26 /* Pods-HearIt.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA4F8B8C617D410AECDEA78C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8CB593F3A9E15E7E8DD711B /* Pods_HearIt.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BF174BC2055569E003CECA1 /* Build configuration list for PBXNativeTarget "HearIt" */;
 			buildPhases = (
+				CADF0645682B7832F1BBBD7D /* [CP] Check Pods Manifest.lock */,
 				1BF174A32055569E003CECA1 /* Sources */,
 				1BF174A42055569E003CECA1 /* Frameworks */,
 				1BF174A52055569E003CECA1 /* Resources */,
+				9A9A1D333B80F51A69CA1E89 /* [CP] Embed Pods Frameworks */,
+				1D4FABD96E5159B8AEDB6747 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,14 +205,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D4FABD96E5159B8AEDB6747 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HearIt/Pods-HearIt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A9A1D333B80F51A69CA1E89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HearIt/Pods-HearIt-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HearIt/Pods-HearIt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CADF0645682B7832F1BBBD7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HearIt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1BF174A32055569E003CECA1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BF174C720555AC1003CECA1 /* SearchViewController.swift in Sources */,
+				1BF174C3205557E8003CECA1 /* TabBarViewController.swift in Sources */,
 				1BF174AD2055569E003CECA1 /* ViewController.swift in Sources */,
 				1BF174B32055569E003CECA1 /* HearIt.xcdatamodeld in Sources */,
 				1BF174AB2055569E003CECA1 /* AppDelegate.swift in Sources */,
+				1BF174CA205562FF003CECA1 /* APIServices.swift in Sources */,
+				1BF174C520555A51003CECA1 /* Podcasts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +405,7 @@
 		};
 		1BF174BD2055569E003CECA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87E4162C8130FD57CACA5D9F /* Pods-HearIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +421,7 @@
 		};
 		1BF174BE2055569E003CECA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC5E55F62E1F98D742333A26 /* Pods-HearIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

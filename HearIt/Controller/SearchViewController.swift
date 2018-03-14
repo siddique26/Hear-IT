@@ -12,6 +12,8 @@ class SearchViewController: UITableViewController,UISearchBarDelegate {
     
     var podcasts: [Podcast] = Array()
     let cellID = "cellID"
+    let cellHeight: CGFloat = 132
+    let headerHeight: CGFloat = 250
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
@@ -21,23 +23,32 @@ class SearchViewController: UITableViewController,UISearchBarDelegate {
         setUpTableView()
     }
     func setUpSearchBar() {
+        definesPresentationContext = true
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.delegate = self
     }
     func setUpTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        //remove divider line
+        tableView.tableFooterView = UIView()
+        
+        //Register cell nib
+        let nib = UINib(nibName: "PodcastCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: cellID)
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let episodeController = EpisodesTableViewController()
+        episodeController.podcast = podcasts[indexPath.row]
+        navigationController?.pushViewController(episodeController, animated: true)
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return podcasts.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        let podcast = podcasts[indexPath.row]
-        cell.imageView?.image = #imageLiteral(resourceName: "podcast-default-cover-art")
-        cell.textLabel?.text = "\(podcast.trackName ?? "")\nby \(podcast.artistName ?? "")"
-        cell.textLabel?.numberOfLines = -1
+            as! PodcastCell
+        cell.podcast = podcasts[indexPath.row]
         return cell
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -45,5 +56,20 @@ class SearchViewController: UITableViewController,UISearchBarDelegate {
             self.podcasts = searchResults
             self.tableView.reloadData()
         }
+    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return cellHeight
+    }
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let nullLabel = UILabel()
+        nullLabel.text = "Please enter a search term to discover new Podcasts."
+        nullLabel.numberOfLines = 2
+        nullLabel.textAlignment = .center
+        nullLabel.font = UIFont.systemFont(ofSize: 22)
+        nullLabel.textColor = UIColor.purpleColor
+        return nullLabel
+    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return self.podcasts.count == 0 ? headerHeight : 0
     }
 }

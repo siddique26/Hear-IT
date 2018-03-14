@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B25A6AF20597EA300ACBB3F /* EpisodesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B25A6AE20597EA300ACBB3F /* EpisodesTableViewController.swift */; };
+		1B6B7F772056AA3600E42A4D /* PodcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6B7F752056AA3600E42A4D /* PodcastCell.swift */; };
+		1B6B7F782056AA3600E42A4D /* PodcastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B6B7F762056AA3600E42A4D /* PodcastCell.xib */; };
+		1B6B7F7E2056C97E00E42A4D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6B7F7D2056C97E00E42A4D /* UIColor.swift */; };
 		1BF174AB2055569E003CECA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF174AA2055569E003CECA1 /* AppDelegate.swift */; };
 		1BF174AD2055569E003CECA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF174AC2055569E003CECA1 /* ViewController.swift */; };
 		1BF174B02055569E003CECA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF174AE2055569E003CECA1 /* Main.storyboard */; };
@@ -14,13 +18,17 @@
 		1BF174B52055569E003CECA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BF174B42055569E003CECA1 /* Assets.xcassets */; };
 		1BF174B82055569E003CECA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF174B62055569E003CECA1 /* LaunchScreen.storyboard */; };
 		1BF174C3205557E8003CECA1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF174C2205557E8003CECA1 /* TabBarViewController.swift */; };
-		1BF174C520555A51003CECA1 /* Podcasts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF174C420555A51003CECA1 /* Podcasts.swift */; };
+		1BF174C520555A51003CECA1 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF174C420555A51003CECA1 /* Podcast.swift */; };
 		1BF174C720555AC1003CECA1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF174C620555AC1003CECA1 /* SearchViewController.swift */; };
 		1BF174CA205562FF003CECA1 /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF174C9205562FF003CECA1 /* APIServices.swift */; };
 		95987C5D155E843F985E41D4 /* Pods_HearIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CB593F3A9E15E7E8DD711B /* Pods_HearIt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B25A6AE20597EA300ACBB3F /* EpisodesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesTableViewController.swift; sourceTree = "<group>"; };
+		1B6B7F752056AA3600E42A4D /* PodcastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCell.swift; sourceTree = "<group>"; };
+		1B6B7F762056AA3600E42A4D /* PodcastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PodcastCell.xib; sourceTree = "<group>"; };
+		1B6B7F7D2056C97E00E42A4D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		1BF174A72055569E003CECA1 /* HearIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HearIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BF174AA2055569E003CECA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BF174AC2055569E003CECA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,7 +38,7 @@
 		1BF174B72055569E003CECA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BF174B92055569E003CECA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BF174C2205557E8003CECA1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		1BF174C420555A51003CECA1 /* Podcasts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcasts.swift; sourceTree = "<group>"; };
+		1BF174C420555A51003CECA1 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		1BF174C620555AC1003CECA1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1BF174C9205562FF003CECA1 /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 		87E4162C8130FD57CACA5D9F /* Pods-HearIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HearIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HearIt/Pods-HearIt.debug.xcconfig"; sourceTree = "<group>"; };
@@ -50,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B6B7F7C2056C96D00E42A4D /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				1B6B7F7D2056C97E00E42A4D /* UIColor.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
 		1BF1749E2055569E003CECA1 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +91,7 @@
 				1BF174C020555790003CECA1 /* Model */,
 				1BF174BF2055577B003CECA1 /* Controller */,
 				1BF174C8205562DE003CECA1 /* API */,
+				1B6B7F7C2056C96D00E42A4D /* Color */,
 				1BF174B42055569E003CECA1 /* Assets.xcassets */,
 				1BF174AA2055569E003CECA1 /* AppDelegate.swift */,
 				1BF174B92055569E003CECA1 /* Info.plist */,
@@ -89,6 +106,7 @@
 				1BF174AC2055569E003CECA1 /* ViewController.swift */,
 				1BF174C2205557E8003CECA1 /* TabBarViewController.swift */,
 				1BF174C620555AC1003CECA1 /* SearchViewController.swift */,
+				1B25A6AE20597EA300ACBB3F /* EpisodesTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -96,7 +114,7 @@
 		1BF174C020555790003CECA1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1BF174C420555A51003CECA1 /* Podcasts.swift */,
+				1BF174C420555A51003CECA1 /* Podcast.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,6 +124,8 @@
 			children = (
 				1BF174AE2055569E003CECA1 /* Main.storyboard */,
 				1BF174B62055569E003CECA1 /* LaunchScreen.storyboard */,
+				1B6B7F752056AA3600E42A4D /* PodcastCell.swift */,
+				1B6B7F762056AA3600E42A4D /* PodcastCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -199,6 +219,7 @@
 			files = (
 				1BF174B82055569E003CECA1 /* LaunchScreen.storyboard in Resources */,
 				1BF174B52055569E003CECA1 /* Assets.xcassets in Resources */,
+				1B6B7F782056AA3600E42A4D /* PodcastCell.xib in Resources */,
 				1BF174B02055569E003CECA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,10 +250,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HearIt/Pods-HearIt-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -270,7 +295,10 @@
 				1BF174B32055569E003CECA1 /* HearIt.xcdatamodeld in Sources */,
 				1BF174AB2055569E003CECA1 /* AppDelegate.swift in Sources */,
 				1BF174CA205562FF003CECA1 /* APIServices.swift in Sources */,
-				1BF174C520555A51003CECA1 /* Podcasts.swift in Sources */,
+				1B6B7F772056AA3600E42A4D /* PodcastCell.swift in Sources */,
+				1B25A6AF20597EA300ACBB3F /* EpisodesTableViewController.swift in Sources */,
+				1BF174C520555A51003CECA1 /* Podcast.swift in Sources */,
+				1B6B7F7E2056C97E00E42A4D /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
